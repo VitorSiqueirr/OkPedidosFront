@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "OkPedidos | Login",
+  title: "OkPedidos",
   description: "Área de acesso do OkPedidos.",
 };
 
