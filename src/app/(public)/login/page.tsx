@@ -39,7 +39,7 @@ export default function Login() {
         <div className="flex flex-col justify-center items-center mt-10">
           <button
             className="text-xl w-fit px-6 py-2 bg-(--color-primary) text-(--color-text-accent) rounded-full hover:cursor-pointer hover:scale-105 transition-all shadow-2xs"
-            onClick={() => router.push("/")}>
+            onClick={() => router.push("/empresas")}>
             Logar
           </button>
           <button
