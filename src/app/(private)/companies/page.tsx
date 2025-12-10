@@ -1,4 +1,4 @@
-import { ListaEmpresas } from "@/components/empresas/ListaEmpresas";
+import { ListaEmpresas } from "@/components/companies/ListaEmpresas";
 import Navbar from "@/components/header/navbar";
 import { Building } from "lucide-react";
 
