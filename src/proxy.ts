@@ -1,4 +1,4 @@
-import { MiddlewareConfig, NextRequest, NextResponse } from "next/server";
+import { ProxyConfig, NextRequest, NextResponse } from "next/server";
 
 const publicRoutes = [
   { path: "/login", whenAuthenticated: "redirect" },
@@ -7,7 +7,7 @@ const publicRoutes = [
 ] as const;
 const REDIRECT_WHEN_NOT_AUTHENTICATED_ROUTE = "/login";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname;
   const publicRoute = publicRoutes.find((route) => route.path === path);
   const authToken = request.cookies.get("token");
@@ -39,6 +39,6 @@ export function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
-export const config: MiddlewareConfig = {
+export const config: ProxyConfig = {
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
 };
