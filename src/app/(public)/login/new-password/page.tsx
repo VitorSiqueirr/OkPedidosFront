@@ -30,15 +30,16 @@ export default function NovaSenha() {
           />
         </div>
       </div>
-
-      <Button
-        handle={() => {
-          router.push("/login/new-password");
-        }}
-        text={"Confirmar Código"}
-        bgColor={"--color-primary"}
-        textColor={"--color-text-accent"}
-      />
+      <div className="flex flex-col justify-center items-center mt-10">
+        <Button
+          handle={() => {
+            router.push("/login/new-password");
+          }}
+          text={"Salvar Nova Senha"}
+          bgColor={"--color-primary"}
+          textColor={"--color-text-accent"}
+        />
+      </div>
     </div>
   );
 }

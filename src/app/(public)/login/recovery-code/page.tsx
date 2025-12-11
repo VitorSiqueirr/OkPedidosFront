@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/components/helpers/button";
 import { useRouter } from "next/navigation";
 
 export default function CodigoRecuperacao() {
@@ -29,16 +30,22 @@ export default function CodigoRecuperacao() {
         </div>
       </div>
       <div className="flex flex-col justify-center items-center mt-10">
-        <button
-          className="text-xl w-fit px-6 py-2 bg-(--color-primary) text-(--color-text-accent) rounded-full hover:cursor-pointer hover:scale-105 transition-all"
-          onClick={() => router.push("/login/new-password")}>
-          Confirmar Código
-        </button>
-        <button
-          className="font-light text-(--color-primary) mt-6 hover:cursor-pointer"
-          onClick={() => router.push("/")}>
-          Voltar a tela de login
-        </button>
+        <Button
+          handle={() => {
+            router.push("/login/new-password");
+          }}
+          text={"Confirmar Código"}
+          bgColor={"--color-primary"}
+          textColor={"--color-text-accent"}
+        />
+        <Button
+          handle={() => {
+            router.push("/login");
+          }}
+          text={"Voltar a tela de login"}
+          bgColor={"--color-primary"}
+          textColor={"--color-text-accent"}
+        />
       </div>
     </div>
   );
